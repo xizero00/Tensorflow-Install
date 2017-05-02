@@ -2,6 +2,7 @@
 
 ## Introduction
 This scrip install tensorflow-gpu automatically, it can install
+
 ipython2 
 
 ipython3
@@ -28,13 +29,19 @@ and set the proxy server's protocol, ip and port
 
 PROXY_SERVER='http\t127.0.0.1:1080'
 
-or 
-
-PROXY_SERVER='socks\t127.0.0.1:1080'
-
 or
 
 PROXY_SERVER='https\t127.0.0.1:1080'
+
+or 
+
+PROXY_SERVER='socks5\t127.0.0.1:1080'
+
+or
+
+PROXY_SERVER='socks4\t127.0.0.1:1080'
+
+
 
 If you do not have proxy you can set pip souce
 
