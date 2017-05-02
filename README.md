@@ -3,11 +3,18 @@
 ## Introduction
 This scrip install tensorflow-gpu automatically, it can install
 ipython2 
+
 ipython3
+
 pip2
+
 pip3
+
 tensorflow-gpu in python2
+
 tensorflow-gpu in python3
+
+other dependencies
 
 in Ubuntu 14.04 and 16.04(tested)
 
