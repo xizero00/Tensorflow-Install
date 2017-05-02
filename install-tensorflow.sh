@@ -45,15 +45,16 @@ then
 	sudo -H proxychains pip3 install -U tensorflow-gpu
 
 	# install in python2
-	sudo apt -y install ipython
+	sudo cp /usr/local/bin/pip2 /usr/local/bin/pip
+	sudo apt -y install ipython2
 	sudo apt -y install python-pip
-	sudo -H proxychains pip install -U pip
+	sudo -H proxychains pip2 install -U pip
 	sudo apt -y remove python-pip
 
-	sudo -H proxychains pip install -U tensorflow-gpu
+	sudo -H proxychains pip2 install -U tensorflow-gpu
 	
 	echo 'check python2 dependency'
-	sudo -H proxychains pip install -i check
+	sudo -H proxychains pip2 install -i check
 	echo 'check python3 dependency'
 	sudo -H proxychains pip3 install -i check
 	
@@ -69,14 +70,15 @@ else
 	sudo -H pip3 install -i ${PIP_SOURCE} -U tensorflow-gpu
 	
 	# install in python2
+	sudo cp /usr/local/bin/pip2 /usr/local/bin/pip
 	sudo apt -y  install ipython
 	sudo apt -y  install python-pip
-	sudo -H pip install -i ${PIP_SOURCE} -U pip
+	sudo -H pip2 install -i ${PIP_SOURCE} -U pip
 	sudo apt -y remove python-pip
-	sudo -H pip install -i ${PIP_SOURCE} -U tensorflow-gpu
+	sudo -H pip2 install -i ${PIP_SOURCE} -U tensorflow-gpu
 	
 	echo 'check python2 dependency'
-	sudo -H pip install -i ${PIP_SOURCE} check
+	sudo -H pip2 install -i ${PIP_SOURCE} check
 	echo 'check python3 dependency'
 	sudo -H pip3 install -i ${PIP_SOURCE} check
 	
